@@ -27,8 +27,6 @@ const ProductDetails = ({
     price
   } = product
 
-  console.log(qty)
-
   return (
     <div>
       <div className="product-detail-container">
