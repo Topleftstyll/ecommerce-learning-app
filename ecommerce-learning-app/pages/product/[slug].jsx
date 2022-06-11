@@ -18,7 +18,8 @@ const ProductDetails = ({
     decQty,
     incQty,
     qty,
-    onAdd
+    onAdd,
+    setShowCart
   } = useStateContext()
   const {
     image,
@@ -26,6 +27,11 @@ const ProductDetails = ({
     details,
     price
   } = product
+
+  const handleBuyNow = () => {
+    onAdd(product, qty)
+    setShowCart(true)
+  }
 
   return (
     <div>
@@ -91,7 +97,7 @@ const ProductDetails = ({
             <button
               type="button"
               className="buy-now"
-              onClick=""
+              onClick={handleBuyNow}
             >
               Buy Now
             </button>

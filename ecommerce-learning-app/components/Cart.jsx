@@ -68,7 +68,7 @@ const Cart = () => {
 
         <div className="product-container">
           {!!cartItems.length && cartItems.map((item, idx) => (
-            <div className="product" key={`cart-item-${item._id}`}>
+            <div className="product" key={`cart-item-${idx}`}>
               <img 
                 src={urlFor(item?.image[0])}
                 className="cart-product-image"
